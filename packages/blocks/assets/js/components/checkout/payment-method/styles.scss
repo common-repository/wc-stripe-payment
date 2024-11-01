@@ -1,0 +1,9 @@
+.wpp-payment-blocks-payment-method__desc {
+  + .wpp-payment-blocks-payment-method-content {
+    margin-top: 10px;
+
+    &.no-content {
+      margin-top: 0;
+    }
+  }
+}

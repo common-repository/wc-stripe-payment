@@ -1,0 +1,727 @@
+.wpp-payment-card-icons-container,
+.wpp-payment-paymentRequest-icons-container {
+    float: left;
+    display: inline-block;
+}
+
+ul.payment_methods li[class*=payment_method] {
+    margin: 0;
+    padding: 0;
+}
+
+li[class*=payment_method] input[type=radio] {
+    margin: 0 5px 0 10px;
+}
+
+li[class*=payment_method] input[type=radio] + label:not(.wpp-payment-label-payment-type) {
+    margin: 0;
+}
+
+.woocommerce-checkout #payment ul.payment_methods li[class*=payment_method_wpp_stripe_]:nth-child(n + 2),
+ul.payment_methods li[class*=payment_method_wpp_stripe_]:nth-child(n + 2) {
+    margin: 0;
+}
+
+li.payment_method_wpp_stripe_cc .wpp-payment-card-icons-container img.wpp-payment-card-icon {
+    max-width: 43px;
+    max-height: 26px;
+    width: 43px;
+    height: 26px;
+    float: none;
+    display: inline;
+}
+
+li.payment_method_wpp_stripe_payment_request .wpp-payment-paymentRequest-icons-container img:not(.gpay) {
+    width: 25px;
+    height: 25px;
+    max-width: 25px;
+    max-height: 25px;
+}
+
+ul.payment_methods label[for*="payment_method_stripe"]:after {
+    clear: left;
+    content: "";
+    display: block;
+}
+
+li.payment_method_wpp_stripe_cc .wpp-payment-card-icons-container img.wpp-payment-card-icon:nth-child(2n+2) {
+    margin: 0px 2px;
+}
+
+li.payment_method_wpp_stripe_cc .wpp-payment-card-icons-container img.wpp-payment-card-icon.open.visa {
+    padding-top: 2px;
+}
+
+ul.payment_methods li[class*=payment_method_wpp_stripe_] label > img:first-of-type {
+    float: left !important;
+}
+
+.wc-wpp_stripe_cc-new-method-container {
+    margin-bottom: 1em;
+}
+
+.wc-wpp_stripe_cc-container .StripeElement {
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 12px;
+    border-radius: 4px;
+    background-color: white;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+}
+
+input.wpp-payment-type
+{
+    display: none !important;
+}
+
+body .wfacp_main_form.woocommerce .wpp-payment-save-source label.checkbox {
+    padding: 0 !important;
+}
+
+label.wpp-payment-label-payment-type,
+input[type=radio] + label.wpp-payment-label-payment-type{
+    margin-bottom: 1em;
+    display: block;
+    padding: 0 !important;
+    color: #000;
+}
+
+.theme-flatsome div.wpp-payment-saved-methods-container {
+    margin: 0 0 1em 0;
+}
+
+label.wpp-payment-label-payment-type:before{
+    content: "";
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px #000;
+    background: #fff;
+    margin-right: 4px;
+    margin-left: .5em;
+    border-radius: 100%;
+    -webkit-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    transform: translateY(2px);
+}
+
+input.wpp-payment-type:checked + label.wpp-payment-label-payment-type:before{
+    background: #000;
+}
+
+label.wpp-payment-label-payment-type:after {
+    content: none !important;
+    display: none !important;
+}
+
+.wpp-payment-saved-methods-container .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-right: 8px;
+}
+
+.wpp-payment-saved-methods-container .select2-container .select2-selection--single .wpp-payment-select2-container,
+.select2-results__options li.wpp-payment-select2-container {
+    display: flex;
+    align-items: center;
+    height: 42px;
+    line-height: 42px !important;
+}
+
+.select2-container .select2-selection--single .wpp-payment-select2-container:before,
+.select2-results__options li.wpp-payment-select2-container:before {
+    content: '';
+    background-repeat: no-repeat;
+    background-size: 40px 24px;
+    width: 40px;
+    height: 42px;
+    display: inline-block;
+    margin-left: 8px;
+    background-position: center;
+}
+
+.select2-container .select2-selection--single .wpp-payment-select2-container.visa:before,
+.select2-results__options li.wpp-payment-select2-container.visa:before,
+.select2-results__options li.wpp-payment-select2-container.visa:before {
+    background-image: url(../img/cards/visa.svg);
+}
+
+.select2-container .select2-selection--single .wpp-payment-select2-container.mastercard:before,
+.select2-results__options li.wpp-payment-select2-container.mastercard:before,
+.select2-results__options li.wpp-payment-select2-container.mastercard:before {
+    background-image: url(../img/cards/mastercard.svg);
+}
+
+.select2-container .select2-selection--single .wpp-payment-select2-container.americanexpress:before,
+.select2-results__options li.wpp-payment-select2-container.americanexpress:before,
+.select2-results__options li.wpp-payment-select2-container.americanexpress:before {
+    background-image: url(../img/cards/amex.svg);
+}
+
+.select2-container .select2-selection--single .wpp-payment-select2-container.amex:before,
+.select2-results__options li.wpp-payment-select2-container.amex:before,
+.select2-results__options li.wpp-payment-select2-container.amex:before {
+    background-image: url(../img/cards/amex.svg);
+}
+
+.select2-container .select2-selection--single .wpp-payment-select2-container.discover:before,
+.select2-results__options li.wpp-payment-select2-container.discover:before,
+.select2-results__options li.wpp-payment-select2-container.discover:before {
+    background-image: url(../img/cards/discover.svg);
+}
+
+.select2-container .select2-selection--single .wpp-payment-select2-container.mastercard:before,
+.select2-results__options li.wpp-payment-select2-container.mastercard:before,
+.select2-results__options li.wpp-payment-select2-container.mastercard:before {
+    background-image: url(../img/cards/mastercard.svg);
+}
+
+.select2-container .select2-selection--single .wpp-payment-select2-container.dinersclub:before,
+.select2-results__options li.wpp-payment-select2-container.dinersclub:before,
+.select2-results__options li.wpp-payment-select2-container.dinersclub:before {
+    background-image: url(../img/cards/diners.svg);
+}
+
+.select2-container .select2-selection--single .wpp-payment-select2-container.diners:before,
+.select2-results__options li.wpp-payment-select2-container.diners:before,
+.select2-results__options li.wpp-payment-select2-container.diners:before {
+    background-image: url(../img/cards/diners.svg);
+}
+
+.select2-container .select2-selection--single .wpp-payment-select2-container.jcb:before,
+.select2-results__options li.wpp-payment-select2-container.jcb:before,
+.select2-results__options li.wpp-payment-select2-container.jcb:before {
+    background-image: url(../img/cards/jcb.svg);
+}
+
+.select2-results__options li.wpp-payment-select2-container.wpp-payment-ach:before {
+    display: none;
+}
+
+#wpp-payment-card-element {
+    margin-bottom: 1em;
+}
+
+.wc-wpp_stripe_cc-new-method-container .wpp-payment-save-source {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.wc-wpp_stripe_cc-container .wpp-payment-save-source .save-source-label {
+    display: block;
+    padding: 0;
+    margin: 0 5px 0px 0;
+}
+
+.wc-wpp_stripe_cc-container .wpp-payment-save-source input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+
+.wc-wpp_stripe_cc-container .wpp-payment-save-source label.checkbox {
+    position: relative;
+}
+
+.wc-wpp_stripe_cc-container .save-source-checkbox {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    background-color: white;
+    display: block;
+    border-radius: 3px;
+    border: 1px solid #bababa;
+}
+
+.wc-wpp_stripe_cc-container .save-source-checkbox:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.wc-wpp_stripe_cc-container .wpp-payment-save-source input[type="checkbox"]:checked + .save-source-checkbox:after {
+    right: 6px;
+    top: 2px;
+    width: 7px;
+    height: 12px;
+    border: solid #2196F3;
+    border-width: 0 0 3px 3px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+li.payment_method_wpp_stripe_googlepay,
+li.payment_method_wpp_stripe_applepay,
+li.payment_method_wpp_stripe_payment_request {
+    display: none;
+}
+
+#place_order.wpp-dnone,
+#payment #place_order.wpp-dnone,
+.woocommerce-checkout-review-order #payment #place_order.wpp-dnone {
+    position: absolute !important;
+    z-index: -1000 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    opacity: 0 !important;
+}
+
+.wpp-payment-product-checkout-container {
+    display: none;
+    width: 100%;
+}
+
+.wpp-payment-product-checkout-container.bottom {
+    margin-top: 1em;
+}
+
+.wpp-payment-product-checkout-container.top {
+    margin-bottom: 1em;
+}
+
+.wpp-payment-product-checkout-container.active {
+    display: block;
+}
+
+.wpp-payment-product-checkout-container ul.wpp_payment_product_payment_methods,
+.wpp-payment-cart-checkout-container ul.wpp_payment_cart_payment_methods {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.wpp-payment-cart-checkout-container {
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+.wpp-payment-cart-checkout-container ul.wpp_payment_cart_payment_methods {
+    margin-bottom: 1.5em;
+}
+
+.wpp-payment-product-checkout-container ul.wpp_payment_product_payment_methods li,
+.wpp-payment-cart-checkout-container ul.wpp_payment_cart_payment_methods li.wpp-payment-method {
+    padding: 5px 0px;
+}  
+
+.wpp-payment-product-checkout-container ul.wpp_payment_product_payment_methods li[class*=payment_method_wpp_stripe_],
+.wpp-payment-cart-checkout-container ul.wpp_payment_cart_payment_methods li[class*=payment_method_wpp_stripe_] {
+    margin: 0 0 1em 0;
+    list-style: none;
+}
+
+.wpp-payment-product-checkout-container ul.wpp_payment_product_payment_methods li[class*=payment_method_wpp_stripe_]:last-child,
+.wpp-payment-cart-checkout-container ul.wpp_payment_cart_payment_methods li[class*=payment_method_wpp_stripe_]:last-child {
+    margin: 0;
+}
+
+.wpp_payment_product_payment_methods .gpay-button,
+.wpp_payment_cart_payment_methods .gpay-button,
+.wpp_payment_product_payment_methods .gpay-card-info-container,
+.wpp_payment_cart_payment_methods .gpay-card-info-container {
+    width: 100% !important;
+    margin: 0;
+}
+
+.wpp_payment_product_payment_methods .disabled {
+    opacity: 0.45;
+}
+
+.woocommerce-cart .stripe_cart_gateway_active .wc-proceed-to-checkout .checkout-button,
+.stripe_cart_gateway_active .checkout-button {
+    margin-bottom: 0px;
+}
+
+.wpp-payment-cart-or {
+    margin: 1em 0;
+    text-align: center;
+}
+
+li.wpp-payment-method.or {
+    display: none;
+}
+
+.wpp-payment-cart-checkout-container ul.wpp_payment_cart_payment_methods.active li.wpp-payment-method.or {
+    display: block;
+    margin: 15px 0;
+}
+
+.wpp-payment-cart-checkout-container ul.wpp_payment_cart_payment_methods.active li.wpp-payment-method.or p {
+    margin: 0;
+}
+
+li[class*=payment_method_wpp_stripe_].active ~ li.wpp-payment-method.or {
+    display: block;
+    margin: 0;
+}
+
+li.payment_method_wpp_stripe_applepay label:first-of-type img {
+    width: 49px;
+    max-height: 32px;
+}
+
+li.payment_method_wpp_stripe_googlepay label:first-of-type img {
+    width: 48px;
+    max-height: 35px;
+}
+
+li.payment_method_wpp_stripe_googlepay label:first-of-type img[src*=googlepay_standard],
+li.payment_method_wpp_stripe_payment_request label:first-of-type img[src*=googlepay_standard] {
+    width: 60px;
+    max-height: 35px;
+}
+
+li.payment_method_wpp_stripe_googlepay label:first-of-type img[src*=googlepay_round_outline],
+li.payment_method_wpp_stripe_payment_request label:first-of-type img[src*=googlepay_round_outline] {
+    width: 56px;
+    max-height: 30px;
+}
+
+li.payment_method_wpp_stripe_ach label:first-of-type img {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+}
+
+.gpay-button:hover {
+    background-origin: content-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.gpay-button:active {
+    background-origin: content-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.gpay-button:focus {
+    background-origin: content-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@supports (-webkit-appearance: -apple-pay-button) {
+    .apple-pay-button {
+        display: block;
+        -webkit-appearance: -apple-pay-button !important;
+        width: 100%;
+        max-width: 100%;
+        min-width: 200px;
+        height: 40px;
+        max-height: 40px;
+    }
+
+    .apple-pay-button-black {
+        -apple-pay-button-style: black;
+    }
+
+    .apple-pay-button-white {
+        -apple-pay-button-style: white;
+    }
+
+    .apple-pay-button-white-with-line {
+        -apple-pay-button-style: white-outline;
+    }
+
+    .applepay-top-container .apple-pay-button {
+        max-width: 240px;
+    }
+
+    .woocommerce-checkout-payment .apple-pay-button {
+        max-width: 240px;
+    }
+
+    body.single-product div.product form.cart .wpp_payment_product_payment_methods .apple-pay-button {
+        max-width: 100%;
+    }
+}
+
+.wpp-payment-banner-checkout {
+    display: none;
+    padding: 20px 15px 0 15px;
+    border: 1px solid #d1d1d1;
+    border-width: 0 0 1px;
+    position: relative;
+    margin: 1em 0;
+
+}
+
+.wpp-payment-banner-checkout.active {
+    display: block;
+}
+
+.wpp-payment-banner-checkout span.banner-title {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: -13px;
+    left: 0;
+    right: 0;
+    background: transparent;
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+.wpp-payment-banner-checkout span.banner-title:before,
+.wpp-payment-banner-checkout span.banner-title:after {
+    content: ' ';
+    height: 1px;
+    background: #d1d1d1;
+    display: block;
+    width: 50%;
+}
+
+.wpp-payment-banner-checkout span.banner-title:before {
+    margin-left: 8px;
+}
+
+.wpp-payment-banner-checkout span.banner-title:after {
+    margin-right: 8px;
+}
+
+.wpp-payment-banner-checkout ul.wpp_payment_checkout_banner_gateways {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.wpp-payment-banner-checkout ul.wpp_payment_checkout_banner_gateways li.wpp-payment-checkout-banner-gateway {
+    margin: 0 0 20px 0;
+    display: none;
+}
+
+.wpp-payment-banner-checkout ul.wpp_payment_checkout_banner_gateways li.wpp-payment-checkout-banner-gateway .gpay-button,
+.wpp-payment-banner-checkout ul.wpp_payment_checkout_banner_gateways li.wpp-payment-checkout-banner-gateway .gpay-card-info-container {
+    margin: 0;
+}
+
+.wpp-payment-banner-checkout ul.wpp_payment_checkout_banner_gateways .gpay-button,
+.wpp-payment-banner-checkout ul.wpp_payment_checkout_banner_gateways .gpay-card-info-container {
+    width: 100%;
+}
+
+.wpp_payment_product_payment_methods .payment_method_wpp_stripe_payment_request .StripeElement,
+.wpp_payment_cart_payment_methods .payment_method_wpp_stripe_payment_request .StripeElement {
+    padding: 0px;
+    width: 100%;
+}
+
+.wpp-payment-checkout-banner-gateway #wpp-payment-request-banner.StripeElement {
+    width: 100%;
+}
+
+#wpp-payment-card-element {
+    width: 100%;
+}
+
+li.banner_payment_method_wpp_stripe_payment_request .StripeElement {
+    padding: 0px;
+}
+
+.single-product .blockMsg {
+    border: none !important;
+    background-color: transparent !important;
+}
+
+#wpp-payment-card {
+    position: absolute !important;
+    top: 50%;
+    left: 8px;
+    transform: translatey(-50%);
+    width: 23px;
+    height: 15px;
+    padding: 0px;
+    border: none;
+}
+
+#wpp-payment-card.active {
+    width: 32px;
+    height: 20px;
+}
+
+input[id=stripe-postal-code]:focus {
+    outline: none;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+div.postalCode:focus {
+    outline: none;
+    border: none;
+}
+
+li[class*="payment_method_stripe"] .select2-container .select2-selection--single {
+    height: 42px;
+    padding: 0 5px;
+}
+
+li[class*="payment_method_stripe"] .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 42px;
+    top: 1px;
+    left: 1px;
+    transform: translateY(0);
+}
+
+.blockUI.blockMsg {
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+#wpp-payment-request-container.disabled {
+    opacity: 0.45;
+}
+
+.wpp-payment-paymentRequest-icons-container img {
+    float: none;
+}
+
+.select2-container .select2-selection--single .wpp-payment-select2-container.wpp-payment-ach:before {
+    display: none;
+}
+
+ul.wpp_payment_cart_payment_methods li.wpp-payment-method button,
+ul.wpp_payment_product_payment_methods li[class*=payment_method_wpp_stripe_] button,
+ul.wpp_payment_checkout_banner_gateways li button {
+    margin: 0;
+}
+
+ul.payment_methods li[class*=payment_method] {
+    margin: 0;
+    padding: 10px 0;
+}
+
+ul.payment_methods li[class*=payment_method] input[name=payment_method] {
+    margin: 0 5px 0 10px;
+    float: none;
+}
+
+ul.payment_methods li[class*=payment_method] > input[name=payment_method] + label {
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+ul.payment_methods {
+    list-style: none;
+}
+
+ul.payment_methods li[class*=payment_method_wpp_stripe_] .wc-wpp_stripe_cc-new-method-container label:before {
+    display: none;
+}
+
+.wc-wpp_stripe_cc-container .wpp-payment-save-source label.checkbox {
+    padding: 0 !important;
+    margin: 0px;
+}
+
+.qrcode-message {
+    margin: 10px 0 0 0;
+}
+
+
+.wpp-clear {
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+.wpp-payment-gateway-desc p {
+    margin: 0;
+}
+
+li[class*=payment_method_wpp_stripe_] div.wpp-payment-gateway-container.has_tokens {
+    margin-top: 10px;
+}
+
+.wpp-payment-gateway-desc {
+    margin-top: 10px;
+}
+
+#wpp-payment-card-element.StripeElement--webkit-autofill {
+    background-color: transparent !important;
+}
+
+
+.widget_shopping_cart_content .wpp-mini-cart-payment-methods {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.widget_shopping_cart_content .wpp-mini-cart-payment-methods li {
+    margin: 0;
+}
+
+.widget_shopping_cart_content a.wpp-payment-gpay-mini-cart,
+.widget_shopping_cart_content a.wpp-payment-applepay-mini-cart,
+.widget_shopping_cart_content a.wpp-payment-request-mini-cart {
+    background: transparent;
+    padding: 0;
+    border: none;
+}
+
+a.wpp-payment-gpay-mini-cart .gpay-button,
+a.wpp-payment-gpay-mini-cart .gpay-card-info-container
+a.wpp-payment-applepay-mini-cart .apple-pay-button {
+    width: 100%;
+    margin: 0;
+}
+
+.wpp-payment-request-mini-cart.StripeElement {
+    padding: 0;
+    background: transparent;
+    border: none;
+    width: 100%;
+}
+
+.wpp-payment-request-mini-cart.StripeElement .__PrivateStripeElement {
+    width: 100%;
+}
+
+.widget_shopping_cart_content .wpp-payment-overlay {
+    display: none !important;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.75);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.widget_shopping_cart_content .wpp-payment-overlay.active {
+    display: block !important;
+    z-index: 9999;
+}
+
+
+li.payment_method_wpp_stripe_googlepay.wpp-payment-no-desc .payment_box.wpp-payment-no-methods,
+li.payment_method_wpp_stripe_applepay.wpp-payment-no-desc .payment_box.wpp-payment-no-methods,
+li.payment_method_wpp_stripe_payment_request.wpp-payment-no-desc .payment_box.wpp-payment-no-methods {
+    padding: 0;
+    margin: 0;
+}
+
+.wpp-payment-shortcode-cart-buttons .wpp-payment-cart-checkout-container ul.wpp_payment_cart_payment_methods.active li.wpp-payment-method.or {
+    display: none;
+}
+
+.woocommerce-mini-cart__buttons .gpay-card-info-container {
+    min-width: 100%;
+}
+
+.woocommerce-mini-cart__buttons .gpay-card-info-container {
+    margin: 0;
+}

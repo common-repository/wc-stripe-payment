@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wpml-config>
+    <admin-texts>
+        <key name="woocommerce_wpp_stripe_cc_settings">
+            <key name="title_text"/>
+            <key name="description"/>
+        </key>
+        <key name="woocommerce_wpp_stripe_googlepay_settings">
+            <key name="title_text"/>
+            <key name="description"/>
+        </key>
+        <key name="woocommerce_wpp_stripe_applepay_settings">
+            <key name="title_text"/>
+            <key name="description"/>
+        </key>
+        <key name="woocommerce_wpp_stripe_payment_request_settings">
+            <key name="title_text"/>
+            <key name="description"/>
+        </key>
+        <key name="woocommerce_wpp_stripe_ach_settings">
+            <key name="title_text"/>
+            <key name="description"/>
+        </key>
+    </admin-texts>
+</wpml-config>
